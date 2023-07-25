@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import Pagination from "./pagination";
-import UserTable from "./usersTable";
-import GroupList from "./groupList";
-import SearchStatus from "./searchStatus";
+import Pagination from "../components/pagination";
+import UserTable from "../components/usersTable";
+import GroupList from "../components/groupList";
+import SearchStatus from "../components/searchStatus";
 import { paginate } from "../utils/paginate";
 import api from "../api";
 import PropTypes from "prop-types";
