@@ -19,9 +19,9 @@ const NavBar = () => {
                 </Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to="/users/id">
+                {/* <Link className="nav-link" to="/users/:userId">
                     User Card
-                </Link>
+                </Link> */}
             </li>
         </ul>
     );
