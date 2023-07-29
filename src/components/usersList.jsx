@@ -49,7 +49,6 @@ const UsersList = () => {
     };
 
     const handlePageChange = (pageIndex) => {
-        // сниппет nfn
         setCurrentPage(pageIndex);
         // console.log("page: ", pageIndex);
     };

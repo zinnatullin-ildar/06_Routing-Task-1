@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import api from "../api";
 
-const UserPage = (userId) => {
+const UserPage = ({ userId }) => {
     const [user, setUser] = useState();
 
     useEffect(() => {
