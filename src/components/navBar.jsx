@@ -18,11 +18,6 @@ const NavBar = () => {
                     Users
                 </Link>
             </li>
-            <li className="nav-item">
-                {/* <Link className="nav-link" to="/users/:userId">
-                    User Card
-                </Link> */}
-            </li>
         </ul>
     );
 };
