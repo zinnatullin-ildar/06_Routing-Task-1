@@ -1,7 +1,7 @@
-import { Route, Switch } from "react-router-dom";
-import UsersSwitch from "./layouts/usersSwitch";
+import { Route, Switch, Redirect } from "react-router-dom";
 import NavBar from "./components/navBar";
-import MainPage from "./layouts/mainPage";
+import Users from "./layouts/users";
+import MainPage from "./layouts/main";
 import Login from "./layouts/login";
 
 const App = () => {
@@ -11,7 +11,8 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={MainPage} />
                 <Route exact path="/login" component={Login} />
-                <Route exact path="/users/:userId?" component={UsersSwitch} />
+                <Route exact path="/users/:userId?" component={Users} />
+                <Redirect to="/" />
             </Switch>
         </div>
     );

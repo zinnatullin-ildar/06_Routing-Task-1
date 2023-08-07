@@ -8,7 +8,7 @@ const UserPage = ({ userId }) => {
     const [user, setUser] = useState();
     const history = useHistory();
 
-    const backToUserList = () => {
+    const handleClick = () => {
         history.push("/users");
     };
 
@@ -25,24 +25,22 @@ const UserPage = ({ userId }) => {
         <div>
             <h2>Имя: {user.name}</h2>
             <p>Профессия: {user.profession.name}</p>
-            <p>Качества: {<QualitiesList qualities={user.qualities} />}</p>
+            <QualitiesList qualities={user.qualities} />
             <p>Встретился раз: {user.completedMeetings}</p>
             <p>Рейтинг: {user.rate}</p>
             <button
                 type="button"
                 className="btn btn-light"
-                onClick={() => {
-                    backToUserList();
-                }}
+                onClick={handleClick}
             >
-                Вернуться к списку юзеров
+                Все пользователи
             </button>
         </div>
     );
 };
 
 UserPage.propTypes = {
-    userId: PropTypes.string
+    userId: PropTypes.string.isRequired
 };
 
 export default UserPage;
